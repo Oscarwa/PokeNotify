@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Notificator</title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+
+
+    Notification.requestPermission(function (permission) {
+      // If the user accepts, let's create a notification
+      if (permission === "granted") {
+        var notification = new Notification("Pokistopi!", {
+            body: 'A juntar pokibol',
+            tag: 'OALE',
+            icon: 'pokeball.png'
+          });
+        setInterval(function () {
+          var notification = new Notification("Pokistopi!", {
+              body: 'A juntar pokibol',
+              tag: 'OALE',
+              icon: 'pokeball.png'
+            });
+        }, 360000);
+      }
+    });
+
+  // At last, if the user has denied notifications, and you
+  // want to be respectful there is no need to bother them any more.
+  </script>
+</html>
